@@ -4,6 +4,10 @@ NS: https://www.ns.nl/
 https://www.werkenbijns.nl/vacatures
 Kijk bij formulieren: https://www.ns.nl/voorwaarden.html
 
+https://zeroheight.com/4a05a30ad/p/04b3ac-nessie--ns-design-system
+
+https://valsplat.nl/work/een-design-system-van-wereldklasse
+
 ![alt text](FormulierVB1.png)
 ![alt text](image.png)
 ![alt text](image-1.png)
