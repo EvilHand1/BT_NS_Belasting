@@ -25,3 +25,12 @@ een manier om te checken of iets ingevulds valide is.
 Vragen dichtklappen als de optie "nee. ga verder met vraag x" is ingedrukt.
 Ingevulde tekst leegmaken "nee. ga verder met vraag x" is ingedrukt.
 Kunnen klikken op woorden voor een popup met uitleg.
+
+
+design
+
+startscherm heeft startknop en een 'meer informatie' knop.
+
+Elk scherm heeft een vraag (1a, 1b, 1c etc)
+
+Als je een vraag kan overslaan vouwt het onnodige gedeelte in.
