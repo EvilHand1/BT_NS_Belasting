@@ -6,3 +6,25 @@
     padding:0;
 }
 
+:root{
+    --yellow: #FFC917;
+   --primary-text-color: #003082;
+   --alert-message-color: #DB0029;
+   --succes-message-color: #009A42;
+
+   --text-link-hover-color: #0079D3;
+   --button-color: #0063D3;
+   --button-hover-color: #005CA0;
+}
+
+body{
+    background-color: #E6E6E9;
+}
+
+fieldset{
+    background-color: white;
+}
+
+input {
+    color: var(--primary-text-color);
+}
