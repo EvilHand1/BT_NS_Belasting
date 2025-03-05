@@ -14,13 +14,13 @@
 } */
 </style>
 <body>
-    <h1>UX van HTML</h1>
+    <!-- <h1>UX van HTML</h1>
     <a href="#test">
     <img width="200" height="200" alt=""> 
     kiiip
-</a>
+</a> -->
 
-<h1> labels</h1>
+<!-- <h1> labels</h1>
 
 <fieldset>
     <legend>Docenten</legend>
@@ -66,8 +66,63 @@
     <p>Dit staat in een popup/overlay/popover.</p>
     <p>Leuk he.</p>
     <button popovertarget="popup" popovertargetaction="hide">Sluit dit ding weer</button>
-  </dialog>
+  </dialog> -->
 
+
+  <h1>formulier elementen</h1>
+
+
+  <h2>fieldsets</h2>
+<form>
+
+  <fieldset> 1.gegevens van overledenen
+    <p>blablablabla</p>
+<fieldset>
+  <legend>kinderen</legend>
+  <label><input type="radio" name="kinderen" value="n" required>bob</label>
+  <label><input type="radio" name="kinderen" value="j" required>henk</label>
+</fieldset>
+</fieldset>
+
+</form>
+
+
+<h2>labels</h2>
+<form>
+<fieldset>
+  <label>burgerservice nummer 
+  <input type="text">
+  <small>Heeft deze verkrijger geen bsn? Lees dan</small>
+  </label>
+
+  <h3>test</h3>
+
+  <!-- dit is niet handig -->
+  <label
+    for="text-bsn-1">burgerservicenummer
+  <input type="text" id="text-bsn-1">
+</label>
+
+<!-- dit is beter -->
+<label>burgerservicenummer
+  <input type="text">
+</label>
+</fieldset>
+</form>
+
+<h2>input types</h2>
+<p>er zijn heel veel types die iets doen op de telefoon maar niet op toetsenbord</p>
+<fieldset>
+  <h3>https://codepen.io/krijnhoetmer/pen/ZYEKeJB</h3>
+<h3>text</h3>
+<h3>email</h3>
+<h3>tel</h3>
+<h3>url</h3>
+<h3>number</h3>
+<h3>password</h3>
+<h3>search</h3>
+
+</fieldset>
 
 </body>
 </html>
