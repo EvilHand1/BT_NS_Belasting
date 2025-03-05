@@ -6,68 +6,80 @@
     <link rel="stylesheet"href="style.css">
     <title>Document</title>
 </head>
-<style>
-/* dialog{
-    transition: translate 2s ease-out;
-    @starting-style{
-        translate: 100%;
-    }
-} */
-</style>
 <body>
-    <h1>UX van HTML</h1>
-    <a href="#test">
-    <img width="200" height="200" alt=""> 
-    kiiip
-</a>
 
-<h1> labels</h1>
+<!-- <fieldset class="ultimeTest">
+  <h1>Aangifte 2025</h1>
+  <h2>Erfbelasting</h2>
+  <p>Met dit formulier doet u aangifte erfbelasting voor een overlijden
+    in 2023.</p>
+  <button>blabla</button>
+</fieldset> -->
 
-<fieldset>
-    <legend>Docenten</legend>
-    <ul>
-      <li><label><input type="checkbox"> Cyd</li>
-      <li><label><input type="checkbox"> Declan</li>
-      <li><label><input type="checkbox"> Jeremy</li>
-      <li><label><input type="checkbox"> Krijn</li>
-      <li><label><input type="checkbox"> Marie</li>
-      <li><input type="checkbox"> Nils</li>
-      <li><input type="checkbox"> Roel</li>
-      <li><input type="checkbox"> Sanne</li>
-      <li><input type="checkbox"> Vasilis</li>
-    </ul>
-</fieldset>
+<section> <!--vraag 1-->
+  <h1>1. Gegevens van de overledene</h1>
+  <form>
+  
+      <h2>Vul hier de gegevens in van de overledene.</h2>
 
-<fieldset>
-    <legend>Adresgegevens</legend>
-    <p>Straat: <input type="text"placeholder="Bijv. koningstraat"></p>
-    <p>Huisnummer: <input type="text"></p>
-    <p>Postcode: <input type="text"></p>
-    <p>Plaats: <input type="text"></p>
-  </fieldset>
+      <!--vraag 1a-->
+      <fieldset>
+
+        <legend>1a</legend>
+        <label>Voorletter(s)<input type="text" placeholder="Henk" required></label>
+        <label>tussenvoegsel(s) <small>optioneel</small> <input type="text" placeholder="van" ></label>
+        <label>achternaam<input type="text" placeholder="Huizen" required></label>
+        <label>Burgerservicenummer overledene<input type="text" required></label>
+        <label>Overlijdensdatum
+        <input type="date" required>
+        </label>
+
+      </fieldset>
+
+      <!--vraag 1b1-->
+      <fieldset>
+        <legend>1b</legend>
+        <fieldset>
+          <legend>Was de overledene getrouwd of had de overledene een
+            geregistreerd partner op het moment van overlijden?</legend>
+            <label><input type="radio" name="1b1" id="Nee1b1"> Nee. Ga verder met vraag 1c.</label>
+            <label><input type="radio" name="1b1" id=""> Ja.</label>
+          </fieldset>
+
+          <!-- vraag 1b2 -->
+          <fieldset>
+            <legend>Hadden de overledene en diens echtgenoot of
+              geregistreerd partner huwelijkse of partner schaps-
+              voorwaarden laten vastleggen in een notariële akte?</legend>
+              <label><input type="radio" name="1b2" id=""> Nee.</label>
+              <label><input type="radio" name="1b2" id="Ja1b2"> Ja. Stuur een kopie van de akte mee met de aangifte.</label>  
+              <label><input type="file" accept="image/*,.pdf"></label>
+            </fieldset>
+
+          <!-- vraag 1b3 -->
+          <fieldset>
+            <legend>Hadden de overledene en diens partner een finaal verrekenbeding?</legend>
+            <label><input type="radio" name="1b3" id="">Nee</label>
+            <label><input type="radio" name="1b3" id="">Ja</label>
+          </fieldset>
+
+          <!-- vraag 1b4 -->
+          <fieldset>
+            <legend>Datum huwelijkse of partnerschapsvoorwaarden</legend>
+            <input type="date" placeholder="dag">
+          </fieldset>
+      </fieldset>
 
 
-  <h1>accordeons</h1>
+      <!--vraag 1c-->
+      <fieldset>
+        <legend>1c</legend>
 
-  <details name="faq">
-    <summary>bob</summary>
-    <p>LOORRRRRRRREEEEEEEEEEEEEEE</p>
-  </details>
-
-  <details name="faq">
-    <summary>test2</summary>
-    <p>SDFJDSLKFJDSLF</p>
-  </details>
+      </fieldset>
 
 
-  <h1>popups</h1>
-  <button popovertarget="popup">Open iets</button>
-
-  <dialog popover id="popup">
-    <p>Dit staat in een popup/overlay/popover.</p>
-    <p>Leuk he.</p>
-    <button popovertarget="popup" popovertargetaction="hide">Sluit dit ding weer</button>
-  </dialog>
+  </form>
+</section>
 
 
 </body>
