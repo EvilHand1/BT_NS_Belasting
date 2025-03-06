@@ -41,7 +41,6 @@
     font-style: italic;
 }
  
-
 :root{
     --yellow: #FFC917;
    --primary-text-color: #003082;
@@ -52,6 +51,8 @@
    --button-color: #0063D3;
    --button-hover-color: #005CA0;
 }
+
+
 
 body{
     background-color: #E6E6E9;
@@ -65,12 +66,46 @@ body{
     align-items: center; */
 }
 
+h3{
+    font-style: italic;
+}
+
+button{
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 4px;
+    box-shadow: inset 0 -.125rem 0 #004ba0;
+    color: white;
+    font-size: 1rem;
+    line-height: 1.5625rem;
+    min-width: 7.5rem;
+    padding: .625rem 1.125rem;
+    transition: box-shadow .15sease-in-out;
+}
+
+button:hover{
+    box-shadow: inset 0 -3.125rem 0 #004ba0;
+    cursor:pointer;
+}
+
 small{
     font-style: italic;
 }
+
+legend{
+    font-weight: 700;
+}
+
 fieldset{
     background-color: white;
     font-weight: 400;
+
+    border-color: #CDCDD3;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    
 }
 
 input {
@@ -80,17 +115,39 @@ input {
 
 section{
     grid-column: 2 / 6;
-
-
+    box-shadow: 0 .125rem 0 0 rgba(7, 7, 33, .15);
+    
 }
 
+@media screen and (max-width: 500px) {
+    section {
+        grid-column: 1 / 7;
+        color: #003082
+    }
+  }
 
-form fieldset:nth-of-type(2){
+input:user-valid{
+    background: var(--succes-message-color);
+}
+
+input:user-invalid{
+    background: var(--alert-message-color);
+}
+
+section > fieldset{
+    padding: 2rem;
+}
+form > fieldset:nth-of-type(2){
+    
     &:has(#Nee1b1:checked) fieldset:nth-of-type(n+2){
 display:none;
 }
+> fieldset{
+    border-bottom: none;
+}
 
  > fieldset:nth-of-type(2) {
+    
     label:nth-of-type(3){
     display: none;
     }
