@@ -17,8 +17,10 @@
 </fieldset> -->
 
 <section> <!--vraag 1-->
+  <fieldset>
   <h1>1. Gegevens van de overledene</h1>
-  <form>
+  <form action="Question2.html">
+    
   
       <h2>Vul hier de gegevens in van de overledene.</h2>
 
@@ -26,12 +28,15 @@
       <fieldset>
 
         <legend>1a</legend>
-        <label>Voorletter(s)<input type="text" placeholder="Henk" required></label>
+        <label>Voorletter(s) <input type="text" placeholder="Henk" required></label>
+        <br>
         <label>tussenvoegsel(s) <small>optioneel</small> <input type="text" placeholder="van" ></label>
-        <label>achternaam<input type="text" placeholder="Huizen" required></label>
-        <label>Burgerservicenummer overledene<input type="text" required></label>
-        <label>Overlijdensdatum
-        <input type="date" required>
+        <br>
+        <label>achternaam <input type="text" placeholder="Huizen" required></label>
+        <br>
+        <label>Burgerservicenummer overledene <input type="text" required></label>
+        <br>
+        <label>Overlijdensdatum <input type="date" required>
         </label>
 
       </fieldset>
@@ -42,7 +47,8 @@
         <fieldset>
           <legend>Was de overledene getrouwd of had de overledene een
             geregistreerd partner op het moment van overlijden?</legend>
-            <label><input type="radio" name="1b1" id="Nee1b1"> Nee. Ga verder met vraag 1c.</label>
+            <label><input type="radio" name="1b1" id="Nee1b1" required> Nee.<small> Ga verder met vraag 1c.</small></label>
+            <br>
             <label><input type="radio" name="1b1" id=""> Ja.</label>
           </fieldset>
 
@@ -52,7 +58,7 @@
               geregistreerd partner huwelijkse of partner schaps-
               voorwaarden laten vastleggen in een notariële akte?</legend>
               <label><input type="radio" name="1b2" id=""> Nee.</label>
-              <label><input type="radio" name="1b2" id="Ja1b2"> Ja. Stuur een kopie van de akte mee met de aangifte.</label>  
+              <label><input type="radio" name="1b2" id="Ja1b2"> Ja. <small>Stuur een kopie van de akte mee met de aangifte.</small></label>  
               <label><input type="file" accept="image/*,.pdf"></label>
             </fieldset>
 
@@ -66,7 +72,7 @@
           <!-- vraag 1b4 -->
           <fieldset>
             <legend>Datum huwelijkse of partnerschapsvoorwaarden</legend>
-            <input type="date" placeholder="dag">
+            <input type="date">
           </fieldset>
       </fieldset>
 
@@ -77,8 +83,10 @@
 
       </fieldset>
 
-
+      <button type="submit">submit</button>
   </form>
+  
+  </fieldset>
 </section>
 
 

@@ -86,7 +86,7 @@ section{
 
 
 form fieldset:nth-of-type(2){
-    &:has(#Nee1b1:checke d) fieldset:nth-of-type(n+2){
+    &:has(#Nee1b1:checked) fieldset:nth-of-type(n+2){
 display:none;
 }
 
