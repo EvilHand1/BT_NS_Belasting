@@ -136,6 +136,8 @@ input:user-invalid{
 section > fieldset{
     padding: 2rem;
 }
+
+
 form > fieldset:nth-of-type(2){
     
     &:has(#Nee1b1:checked) fieldset:nth-of-type(n+2){

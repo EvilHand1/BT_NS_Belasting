@@ -60,6 +60,26 @@ Ik gebruik ook een grid net zoals de NS website. En ik wou dat het vlak verdween
 
 ![alt text](image-10.png)
 
+## feedback, vooruitgang & volgende week
+
+### feedback
+
+* gebruik gamification
+* alles op een pagina, om je meer uit te dagen
+
+### vooruitgang
+
+* vraag 1 gemaakt
+* input velden goed en fout
+* vraag 1b kunnen inklappen
+* iets van de opmaak
+
+### volgende week
+
+* vinkje en kruisje toevoegen als iets nog moet ingevuld worden
+* vraag 4 meerdere erfgenamen op een manier doen
+* de styling verbeteren?
+
 ## bronnen
 
 https://www.ns.nl/platform/fundamentals/index.html
