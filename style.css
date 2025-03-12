@@ -99,6 +99,8 @@ legend{
 }
 
 fieldset{
+    display: flex;
+    flex-direction: column;
     background-color: white;
     font-weight: 400;
 
@@ -110,10 +112,28 @@ fieldset{
     
 }
 
+label{
+    display: flex;
+    flex-direction:column;
+    padding:.4em;
+    max-width: 15em;
+}
+
+label::after{
+content:"kiiip";
+color: var(--alert-message-color);
+font-style: italic;
+}
+
+.inputRadio{
+    flex-direction: row;
+ gap: 5px;
+}
+
 input {
     color: var(--primary-text-color);
     border-color: var(--button-color);
-    border-radius: 10% 10%;
+    border-radius: 5px;
     padding:.5vw;
 }
 

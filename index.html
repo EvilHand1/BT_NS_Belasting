@@ -31,13 +31,9 @@
 
         <legend>1a</legend>
         <label>Voorletter(s) <input type="text" placeholder="Bijvoorbeeld C" required></label>
-        <br>
         <label>tussenvoegsel(s) <small>optioneel</small> <input type="text" placeholder="Bijvoorbeeld van" ></label>
-        <br>
-        <label>achternaam <input type="text" placeholder="Bijvoorbeeld Huizen" required></label>
-        <br>
+        <label>achternaam<input type="text" placeholder="Bijvoorbeeld Huizen" required></label>
         <label>Burgerservicenummer overledene <input type="text" required pattern="[1-9][0-9]{8}" placeholder="Bijvoorbeeld 123456789"></label>
-        <br>
         <label>Overlijdensdatum <input type="date" required>
         </label>
 
@@ -49,9 +45,8 @@
         <fieldset>
           <p>Was de overledene getrouwd of had de overledene een
             geregistreerd partner op het moment van overlijden?</p>
-            <label><input type="radio" name="1b1" id="Nee1b1" required> Nee.<small> Ga verder met vraag 1c.</small></label>
-            <br>
-            <label><input type="radio" name="1b1" id=""> Ja.</label>
+            <label class="inputRadio"><input type="radio" name="1b1" id="Nee1b1" required > Nee.<small> Ga verder met vraag 1c.</small></label>
+            <label class="inputRadio"><input type="radio" name="1b1" id=""> Ja.</label>
           </fieldset>
 <br>
           <!-- vraag 1b2 -->
@@ -59,28 +54,23 @@
             <p>Hadden de overledene en diens echtgenoot of
               geregistreerd partner huwelijkse of partner schaps-
               voorwaarden laten vastleggen in een notariële akte?</p>
-              <label><input type="radio" name="1b2" id=""> Nee.</label>
-              <br>
-              <label><input type="radio" name="1b2" id="Ja1b2"> Ja. <small>Stuur een kopie van de akte mee met de aangifte.</small></label>  
-              <br>
+              <label class="inputRadio"><input type="radio" name="1b2" id=""> Nee.</label>
+              <label class="inputRadio"><input type="radio" name="1b2" id="Ja1b2"> Ja. <small>Stuur een kopie van de akte mee met de aangifte.</small></label>  
               <label><input type="file" accept="image/*,.pdf"></label>
             </fieldset>
 <br>
           <!-- vraag 1b3 -->
           <fieldset>
-            <p>Hadden de overledene en diens partner een finaal verrekenbeding?</p>
-            
-            <label><input type="radio" name="1b3" id="">Nee</label>
-            <br>
-            <label><input type="radio" name="1b3" id="">Ja</label>
+            <p>Hadden de overledene en diens partner een finaal verrekenbeding?</p>          
+            <label class="inputRadio"><input type="radio" name="1b3" id="">Nee</label>
+            <label class="inputRadio"><input type="radio" name="1b3" id="">Ja</label>
           </fieldset>
 <br>
           <!-- vraag 1b4 -->
           <fieldset>
             <p>Datum huwelijkse of partnerschapsvoorwaarden</p>
-            <input type="date">
+            <label><input type="date"></label>
           </fieldset>
-          <br>
       </fieldset>
 
 
