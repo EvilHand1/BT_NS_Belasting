@@ -50,20 +50,21 @@
    --text-link-hover-color: #0079D3;
    --button-color: #0063D3;
    --button-hover-color: #005CA0;
+
+   --background-color: #E6E6E9;
 }
 
-
+.Warning{
+    color: var(--alert-message-color);
+}
 
 body{
-    background-color: #E6E6E9;
+    background-color: var(--background-color);
     display: grid;
     grid-template-columns:repeat(6, 1fr);
 
     font-family: 'nssans', sans-serif;
     color: var(--primary-text-color);
-    /* display:flex;
-    justify-content: center;
-    align-items: center; */
 }
 
 h3{
@@ -80,7 +81,8 @@ button{
     line-height: 1.5625rem;
     min-width: 7.5rem;
     padding: .625rem 1.125rem;
-    transition: box-shadow .15sease-in-out;
+    transition: box-shadow .15s ease-in-out;
+    align-self: right;
 }
 
 button:hover{
@@ -110,10 +112,15 @@ fieldset{
 
 input {
     color: var(--primary-text-color);
+    border-color: var(--button-color);
+    border-radius: 10% 10%;
+    padding:.5vw;
 }
 
 
 section{
+    position:relative;
+    top: 5dvh;
     grid-column: 2 / 6;
     box-shadow: 0 .125rem 0 0 rgba(7, 7, 33, .15);
     
@@ -126,11 +133,12 @@ section{
   }
 
 input:user-valid{
-    background: var(--succes-message-color);
+    border-color: var(--succes-message-color);
+  
 }
 
 input:user-invalid{
-    background: var(--alert-message-color);
+    border-color: var(--alert-message-color);
 }
 
 section > fieldset{

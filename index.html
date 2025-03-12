@@ -18,7 +18,7 @@
 
 
 <section> <!--vraag 1-->
-  <h1>Dit is een schoolproject</h1>
+  <h1 class="Warning">Dit is een schoolproject</h1>
   <fieldset>
   <h1>1. Gegevens van de overledene</h1>
   <form action="Question2.html">
@@ -30,13 +30,13 @@
       <fieldset>
 
         <legend>1a</legend>
-        <label>Voorletter(s) <input type="text" placeholder="BIJVOORBEELD Henk" required></label>
+        <label>Voorletter(s) <input type="text" placeholder="Bijvoorbeeld C" required></label>
         <br>
-        <label>tussenvoegsel(s) <small>optioneel</small> <input type="text" placeholder="van" ></label>
+        <label>tussenvoegsel(s) <small>optioneel</small> <input type="text" placeholder="Bijvoorbeeld van" ></label>
         <br>
-        <label>achternaam <input type="text" placeholder="Huizen" required></label>
+        <label>achternaam <input type="text" placeholder="Bijvoorbeeld Huizen" required></label>
         <br>
-        <label>Burgerservicenummer overledene <input type="text" required></label>
+        <label>Burgerservicenummer overledene <input type="text" required pattern="[1-9][0-9]{8}" placeholder="Bijvoorbeeld 123456789"></label>
         <br>
         <label>Overlijdensdatum <input type="date" required>
         </label>
@@ -90,7 +90,7 @@
 
       </fieldset>
 
-      <button type="submit">submit</button>
+      <button type="submit">Volgende</button>
   </form>
   
   </fieldset>
