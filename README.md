@@ -87,3 +87,6 @@ https://www.ns.nl/platform/fundamentals/index.html
 https://www.w3schools.com/css/css3_mediaqueries_ex.asp
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout
+
+
+https://www.w3schools.com/tags/tag_template.asp
