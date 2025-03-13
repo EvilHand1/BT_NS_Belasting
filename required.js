@@ -1,9 +1,4 @@
 function RequiredOnnOff(inputIds, shouldRequire = false){
-    var chkYes = document.getElementById("Nee1b1");
-
-
-var test = document.getElementsByName("1b3");
-
 inputIds.forEach(id => {
 var inputElement = document.getElementsByName(id);
 if (inputElement){

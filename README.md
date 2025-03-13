@@ -87,3 +87,10 @@ https://www.ns.nl/platform/fundamentals/index.html
 https://www.w3schools.com/css/css3_mediaqueries_ex.asp
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout
+
+
+
+Turning on/off the required attribute:
+https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByName
+https://stackoverflow.com/questions/40434416/setting-and-removing-the-required-attribute-using-javascript-and-html5#:~:text=You%20could%20use%20.,directly%20operate%20on%20the%20element.
+https://www.aspsnippets.com/Articles/1981/RadioButton-OnClick-event-example-in-JavaScript/
