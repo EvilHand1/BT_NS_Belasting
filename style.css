@@ -144,7 +144,8 @@ input {
 
 section{
     position:relative;
-    top: 5dvh;
+    padding-top:2em;
+    padding-bottom: 2em;
     grid-column: 2 / 6;
     box-shadow: 0 .125rem 0 0 rgba(7, 7, 33, .15);
     

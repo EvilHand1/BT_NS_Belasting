@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"href="style.css">
+    <script src="required.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -56,32 +57,36 @@
           <div data-title="Maak een keuze">
             <p>Was de overledene getrouwd of had de overledene een
             geregistreerd partner op het moment van overlijden?</p>
-            <label class="inputRadio"><input type="radio" name="1b1" id="Nee1b1" required > Nee.<small> Ga verder met vraag 1c.</small></label>
-            <label class="inputRadio"><input type="radio" name="1b1" id=""> Ja.</label>
+            <label class="inputRadio"><input type="radio" name="1b1" id="Nee1b1" required onclick="RequiredOnnOff(['1b2', '1b3', '1b4'], false)" > Nee.<small> Ga verder met vraag 1c.</small></label>
+            <label class="inputRadio"><input type="radio" name="1b1" id="" required onclick="RequiredOnnOff(['1b2', '1b3', '1b4'], true)"> Ja.</label>
           </div>
           </fieldset>
 <br>
           <!-- vraag 1b2 -->
           <fieldset>
+            <div data-title="Maak een keuze">
             <p>Hadden de overledene en diens echtgenoot of
               geregistreerd partner huwelijkse of partner schaps-
               voorwaarden laten vastleggen in een notariële akte?</p>
-              <label class="inputRadio"><input type="radio" name="1b2" id=""> Nee.</label>
-              <label class="inputRadio"><input type="radio" name="1b2" id="Ja1b2"> Ja. <small>Stuur een kopie van de akte mee met de aangifte.</small></label>  
-              <label><input type="file" accept="image/*,.pdf"></label>
+              <label class="inputRadio"><input type="radio" name="1b2" id="kIP" onclick="RequiredOnnOff(['1b2.1'], false)"> Nee.</label>
+              <label class="inputRadio"><input type="radio" name="1b2" id="Ja1b2" onclick="RequiredOnnOff(['1b2.1'], true)"> Ja. <small>Stuur een kopie van de akte mee met de aangifte.</small></label>  
+              <label><input type="file" accept="image/*,.pdf" name="1b2.1"></label>
+              </div>
             </fieldset>
 <br>
           <!-- vraag 1b3 -->
           <fieldset>
+            <div data-title="Maak een keuze">
             <p>Hadden de overledene en diens partner een finaal verrekenbeding?</p>          
-            <label class="inputRadio"><input type="radio" name="1b3" id="">Nee</label>
-            <label class="inputRadio"><input type="radio" name="1b3" id="">Ja</label>
+            <label class="inputRadio"><input type="radio" name="1b3" id="test1">Nee</label>
+            <label class="inputRadio"><input type="radio" name="1b3" id="test2">Ja</label>
+            </div>
           </fieldset>
 <br>
           <!-- vraag 1b4 -->
           <fieldset>
             <p>Datum huwelijkse of partnerschapsvoorwaarden</p>
-            <label><input type="date"></label>
+            <label><input type="date" name="1b4"></label>
           </fieldset>
       </fieldset>
 
