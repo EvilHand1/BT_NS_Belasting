@@ -20,7 +20,7 @@ function generateFieldsets(button) {
   }
 
   //met chatGPT
-  document.getElementById("insertHere").appendChild(clon); // Change this to your target ID
+  document.getElementById("SpawnQuestions").appendChild(clon); // Change this to your target ID
   // document.body.appendChild(clon);
   
 }
