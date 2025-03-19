@@ -6,6 +6,7 @@
     padding:0;
 }
 
+/* Van Dannii gekregen */
 @font-face {
     font-family: 'nssans';
     src: url('/fonts/nssans-regular.woff2') format('woff2');
@@ -181,13 +182,9 @@ display:none;
 }
 
  > fieldset:nth-of-type(2) {
-    
-    label:nth-of-type(3){
-    display: none;
-    }
 
-   &:has(#Ja1b2:checked) label:nth-of-type(3){
-        display:block;
+   &:has(#Nee1b2:checked) label:nth-of-type(3){
+        display:none;
     }
  }
 }

@@ -9,15 +9,6 @@
 </head>
 <body>
 
-<!-- <fieldset class="ultimeTest">
-  <h1>Aangifte 2025</h1>
-  <h2>Erfbelasting</h2>
-  <p>Met dit formulier doet u aangifte erfbelasting voor een overlijden
-    in 2023.</p>
-  <button>blabla</button>
-</fieldset> -->
-
-
 <section> <!--vraag 1-->
   <h1 class="Warning">Dit is een schoolproject</h1>
   <fieldset>
@@ -31,14 +22,19 @@
       <fieldset>
 
         <legend>1a</legend>
+        <!-- div data-title gemaakt met Dante's hulp -->
         <div data-title="Voorletters moeten bestaan uit één of meer hoofdletters, gescheiden door punten">
           <label>Voorletter(s) <input type="text" required
-           placeholder="Bijvoorbeeld C" pattern="[A-Z]"title="Voorletters moeten bestaan uit één of meer hoofdletters, gescheiden door punten"></label></div>
-        <label>tussenvoegsel(s) 
-          <small>optioneel</small> <input type="text"
-          placeholder="Bijvoorbeeld van" ></label>
-        <div data-title="Achternaam mag alleen letters, accenten, apostrofen, koppeltekens en spaties bevatten">
-          <label>achternaam<input type="text" required
+           placeholder="Bijvoorbeeld B.A" pattern="[^0-9]+" title="Voorletters moeten bestaan uit één of meer hoofdletters, gescheiden door punten"></label></div>
+        
+          <div data-title="Tussenvoegsels mogen geen cijfers bevatten.">
+            <label>tussenvoegsel(s) 
+              <small>optioneel</small> <input type="text" pattern="[^0-9]+"
+              placeholder="Bijvoorbeeld van" >
+            </label>
+          </div>
+          <div data-title="Achternaam mag alleen letters, accenten, apostrofen, koppeltekens en spaties bevatten">
+          <label>achternaam<input type="text" pattern="[^0-9]+" required
           placeholder="Bijvoorbeeld Huizen" title="Achternaam mag alleen letters, accenten, apostrofen, koppeltekens en spaties bevatten"></label>
         </div>
         <div data-title="BSN nummer moet 8 of 9 cijfers bevatten">
@@ -68,7 +64,7 @@
             <p>Hadden de overledene en diens echtgenoot of
               geregistreerd partner huwelijkse of partner schaps-
               voorwaarden laten vastleggen in een notariële akte?</p>
-              <label class="inputRadio"><input type="radio" name="1b2" id="kIP" onclick="RequiredOnnOff(['1b2.1'], false)"> Nee.</label>
+              <label class="inputRadio"><input type="radio" name="1b2" id="Nee1b2" onclick="RequiredOnnOff(['1b2.1'], false)"> Nee.</label>
               <label class="inputRadio"><input type="radio" name="1b2" id="Ja1b2" onclick="RequiredOnnOff(['1b2.1'], true)"> Ja. <small>Stuur een kopie van de akte mee met de aangifte.</small></label>  
               <label><input type="file" accept="image/*,.pdf" name="1b2.1"></label>
               </div>
