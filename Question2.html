@@ -5,22 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"href="style.css">
     <script src="required.js"></script>
+    <script src="javascrip.js"></script>
     <title>Document</title>
 </head>
 <body>
+    
+<section>
+  <form action="Question2.html">
+  <section>
+    <!-- <label for="numSections">Aantal verkrijgers:</label>
+    <input type="number" id="numSections" min="1" placeholder="Voer een aantal in"> -->
+  </section>
+  <h1 class="Warning">Dit is een schoolproject</h1>
 <template>
 <section> <!--vraag 1-->
-  <h1 class="Warning">Dit is een schoolproject</h1>
-  <fieldset>
-  <h1>4. Gegevens verkrijgers</h1>
-  <form action="Question2.html">
-    
+<fieldset>
+  <h1>4. Gegevens verkrijgers</h1>   
   
       <h3>Op dit formulier staat een invulvak voor 1 verkrijger.</h3>
 
       <!--vraag 1a-->
       <fieldset>
-
         <legend>1a</legend>
         <label>Voorletter(s) <input type="text" placeholder="Bijvoorbeeld C" required></label>
         <br>
@@ -41,12 +46,54 @@
 
       </fieldset>
 
-      <button type="submit">Volgende</button>
-  </form>
   
+  <div id="BOB">
+    <button type="submit">Vorige</button>
+    <button type="button" onclick="generateFieldsets(this)">Genereer</button>
+    <button type="submit">Volgende</button>
+    </div>
+    
   </fieldset>
-</section>
 </template>
+  <fieldset>
+  <h1>4. Gegevens verkrijgers</h1>
+
+      <h3>Op dit formulier staat een invulvak voor 1 verkrijger.</h3>
+
+      <!--vraag 1a-->
+      <fieldset>
+        <legend>1a</legend>
+        <label>Voorletter(s) <input type="text" placeholder="Bijvoorbeeld C" required></label>
+        <br>
+        <label>tussenvoegsel(s) <small>optioneel</small> <input type="text" placeholder="Bijvoorbeeld van" ></label>
+        <br>
+        <label>achternaam <input type="text" placeholder="Bijvoorbeeld Huizen" required></label>
+        <br>
+        <label>Burgerservicenummer overledene <input type="text" required pattern="[1-9][0-9]{8}" placeholder="Bijvoorbeeld 123456789"></label>
+        <br>
+        <label>Overlijdensdatum <input type="date" required>
+        </label>
+
+      </fieldset>
+
+      <!--vraag 1c-->
+      <fieldset>
+        <legend>1c</legend>
+
+      </fieldset>
+
+      <div id="BOB">
+      <button type="submit">Vorige</button>
+      <button type="button" onclick="generateFieldsets(this)">Genereer</button>
+      <button type="submit">Volgende</button>
+      </div>
+    </fieldset>
+
+    <div id="kip">
+    </div>
+
+</form>
+</section>
 
 </body>
 </html>

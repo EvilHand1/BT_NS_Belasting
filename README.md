@@ -94,3 +94,6 @@ Turning on/off the required attribute:
 https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByName
 https://stackoverflow.com/questions/40434416/setting-and-removing-the-required-attribute-using-javascript-and-html5#:~:text=You%20could%20use%20.,directly%20operate%20on%20the%20element.
 https://www.aspsnippets.com/Articles/1981/RadioButton-OnClick-event-example-in-JavaScript/
+
+
+https://www.w3schools.com/tags/tag_template.asp
