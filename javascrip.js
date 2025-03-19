@@ -1,22 +1,42 @@
+/*
+Dit is gedaan met de hulp van chatGPT en Quy
+*/
+let verkrijgerCount = 1;
 function generateFieldsets(button) {
   let temp = document.getElementsByTagName("template")[0];
   let clon = temp.content.cloneNode(true);
-  
-  let parent = button.closest("#BOB"); // Find the closest #BOB parent
+  let parent = button.closest("#ButtonGroup");
 
-  if (parent) {
-    parent.style.display = "none"; // Hide only this instance of #BOB
+  // dit was nodig om de knoppen te verplaatsen, maar dat gebeurd niet meer.
+  // if (parent) {
+  //   parent.style.display = "none";
+  // }
+
+  // geïnspireerd door Quy
+  let legend = clon.querySelector("legend");
+  if (legend) {
+    verkrijgerCount++;
+    legend.textContent = `verkrijger ${verkrijgerCount}`;
   }
 
-  // document.getElementById("BOB").style.display="none";
-
-  document.body.appendChild(clon);
+  //met chatGPT
+  document.getElementById("insertHere").appendChild(clon); // Change this to your target ID
+  // document.body.appendChild(clon);
+  
 }
 
+// geinspireerd bij Quy
 document.addEventListener("DOMContentLoaded", () =>{
-  document.getElementById("kip").style.display="none";
+  document.getElementById("JavascriptFailed").style.display="none";
+  TurnOffButton()
 });
 
+function TurnOffButton(){
+  document.getElementById("GenerateButton").style.display= "none";
+}
+function TurnOnButton(){
+  document.getElementById("GenerateButton").style.display= "block";
+}
 // function generateFieldsets() {
 //   let count = document.getElementById("numSections").value;
 

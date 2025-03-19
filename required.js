@@ -1,6 +1,6 @@
-function RequiredOnnOff(inputIds, shouldRequire = false){
-inputIds.forEach(id => {
-var inputElement = document.getElementsByName(id);
+function RequiredOnnOff(inputNames, shouldRequire = false){
+inputNames.forEach(name => {
+var inputElement = document.getElementsByName(name);
 if (inputElement){
     if (shouldRequire){
         inputElement.forEach(input => input.setAttribute("required", "true"));    }
