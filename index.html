@@ -10,13 +10,13 @@
 <body>
 
 <section> <!--vraag 1-->
-  <h1 class="Warning">Dit is een schoolproject</h1>
+  <h1 class="School-Warning">Dit is een schoolproject</h1>
   <fieldset>
   <h1>1. Gegevens van de overledene</h1>
   <form action="Question2.html">
     
   
-      <h3>Vul hier de gegevens in van de overledene.</h3>
+      <h3 class="Italic">Vul hier de gegevens in van de overledene.</h3>
 
       <!--vraag 1a-->
       <fieldset>
@@ -29,7 +29,7 @@
         
           <div data-title="Tussenvoegsels mogen geen cijfers bevatten.">
             <label>tussenvoegsel(s) 
-              <small>optioneel</small> <input type="text" pattern="[^0-9]+"
+              <small class="Italic">optioneel</small> <input type="text" pattern="[^0-9]+"
               placeholder="Bijvoorbeeld van" >
             </label>
           </div>
@@ -44,8 +44,6 @@
         </label></div>
 
       </fieldset>
-<br>
-
       <!--vraag 1b1-->
       <fieldset>
         <legend>1b</legend>
@@ -57,7 +55,6 @@
             <label class="inputRadio"><input type="radio" name="1b1" id="" required onclick="RequiredOnnOff(['1b2', '1b3', '1b4'], true)"> Ja.</label>
           </div>
           </fieldset>
-<br>
           <!-- vraag 1b2 -->
           <fieldset>
             <div data-title="Maak een keuze">
@@ -65,11 +62,10 @@
               geregistreerd partner huwelijkse of partner schaps-
               voorwaarden laten vastleggen in een notariële akte?</p>
               <label class="inputRadio"><input type="radio" name="1b2" id="Nee1b2" onclick="RequiredOnnOff(['1b2.1'], false)"> Nee.</label>
-              <label class="inputRadio"><input type="radio" name="1b2" id="Ja1b2" onclick="RequiredOnnOff(['1b2.1'], true)"> Ja. <small>Stuur een kopie van de akte mee met de aangifte.</small></label>  
+              <label class="inputRadio"><input type="radio" name="1b2" id="Ja1b2" onclick="RequiredOnnOff(['1b2.1'], true)"> Ja. <small class="Italic">Stuur een kopie van de akte mee met de aangifte.</small></label>  
               <label><input type="file" accept="image/*,.pdf" name="1b2.1"></label>
               </div>
             </fieldset>
-<br>
           <!-- vraag 1b3 -->
           <fieldset>
             <div data-title="Maak een keuze">
@@ -78,14 +74,12 @@
             <label class="inputRadio"><input type="radio" name="1b3" id="test2">Ja</label>
             </div>
           </fieldset>
-<br>
           <!-- vraag 1b4 -->
           <fieldset>
             <p>Datum huwelijkse of partnerschapsvoorwaarden</p>
             <label><input type="date" name="1b4"></label>
           </fieldset>
       </fieldset>
-
 
       <!--vraag 1c-->
       <fieldset>
