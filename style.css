@@ -118,17 +118,15 @@ fieldset{
     flex-direction: column;
     background-color: white;
     font-weight: 400;
-
     border-color: #CDCDD3;
     border:none;
-    
 }
 
 fieldset:has(fieldset){
     background-color: var(--yellow);
 }
 
-/* Met behulp van Dante */
+/* Inspiratie van Dante */
 fieldset div:has(:user-invalid)::after{
     content:attr(data-title);
     color: var(--alert-message-color);
@@ -193,11 +191,6 @@ form > fieldset{
         display:none;
     }
 }
-
-/* form:has(#Nee3b1:checked) #GenerateButton{
-    display:none;
-} */
-
 /* https://www.w3schools.com/css/css3_mediaqueries_ex.asp */
 @media screen and (max-width: 500px) {
     section {

@@ -166,6 +166,63 @@ https://www.w3schools.com/tags/tag_template.asp
 
 ## proces week 4
 
+Deze week wou ik toch nog een keer kijken naar het dupliceren van html gedeeltes. De basis had ik al, maar ik vond de uitvoering toch niet zo mooi. Dus ik heb het invoer verandert naar een knop die een nieuw veld maakt, geïnspireerd door Vivanne. Dit was redelijk makkelijk om te veranderen, maar nu moest ik ervoor zorgen dat de knop niet steeds dubbel kwam te staan. Heel simpel om uit de template te halen, maar toen werkte het plaatsen niet. Quy om advies gevraagd en hij zei dat hij van plan was om de knop te verwijderen. Dit had ik dus gedaan, maar toen zei Quy later waarom de volgende en vorige knoppen zo slecht waren neergezet in mijn html, dus ik had het verplaatst en toen hoefde de knop verplaats code niet meer.
+
+```js
+function generateFieldsets(button) {
+  let parent = button.closest("#ButtonGroup");
+    parent.style.display = "none";
+}
+```
+
+Ik had ook het probleem dat als je klikte op de genereer knop klikte het nieuwe vragenlijstje niet goed tevoorschijn kwam. Hiervoor moest ik een lege div toevoegen met een id, om vervolgens de template daarin te spawnen, wat werkte.
+
+```js
+let verkrijgerCount = 1;
+function generateFieldsets(button) {
+  let temp = document.getElementsByTagName("template")[0];
+  let clon = temp.content.cloneNode(true);
+
+  // geïnspireerd door Quy
+  let legend = clon.querySelector("legend");
+  if (legend) {
+    verkrijgerCount++;
+    legend.textContent = `verkrijger ${verkrijgerCount}`;
+  }
+
+  //met chatGPT
+  document.getElementById("SpawnQuestions").appendChild(clon);
+}
+```
+
+Toen dit allemaal werkte moest ik het nog javascript failproof maken. Mede doordat ik weinig tijd had en ook geïnspireerd door Quy, heb ik het vragenlijstje 4 keer gekopiërd, in een div gezet en die wordt op non-actief gezet met javascript. Dus als javascript werkt is het er niet.
+
+Nu had ik dat de vragenlijsten javascript proof, maar ik had ook nog de genereer button. Eerst zette ik deze op non-actief met css. Wat werkte, maar als javascript en css niet werken dat was de knop er nog en deed het niks. Oftewel niet gebruikersvriendelijk. ChatGPT gaf me allemaal domme oplossingen om die knop aan en uit te zetten. Ik wou het doen met javascript, maar wist niet hoe en chatgpt gaf me onclick events, maar dat werkt niet want ik heb ook een functie voor de required die erop zat. Dus chatgpt hielp niet, dus ik vroeg of je simpelweg 2 functies kan aanroepen in html en dat kan. Dus heel simpel opgelost.
+
+```js
+// geinspireerd bij Quy
+document.addEventListener("DOMContentLoaded", () =>{
+  document.getElementById("JavascriptFailed").style.display="none";
+  TurnOffButton()
+});
+
+function TurnOffButton(){
+  document.getElementById("GenerateButton").style.display= "none";
+}
+function TurnOnButton(){
+  document.getElementById("GenerateButton").style.display= "block";
+}
+```
+![alt text](image.png)
+
+<video controls src="20250320-0909-46.9116462.mp4" title="Title"></video>
+
+<video controls src="20250320-0911-30.5535092.mp4" title="Title"></video>
+
 ## bronnen
+
+Quy
+
+https://chat.openai.com/
 
 https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
