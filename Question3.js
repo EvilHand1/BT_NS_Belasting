@@ -2,7 +2,7 @@
 Dit is gedaan met de hulp van chatGPT en Quy
 */
 let verkrijgerCount = 1;
-function generateFieldsets(button) {
+function generateFieldsets() {
   let temp = document.getElementsByTagName("template")[0];
   let clon = temp.content.cloneNode(true);
 
