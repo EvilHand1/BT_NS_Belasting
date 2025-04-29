@@ -10,18 +10,18 @@ var inputElement = document.getElementsByName(name);
 });
 }
 
+document.getElementById("Ja1b1").addEventListener("change", function () {
+    RequiredOnnOff(["1b2", "1b3", "1b4"], true);
+  });
+  
+  document.getElementById("Nee1b1").addEventListener("change", function () {
+    RequiredOnnOff(["1b2", "1b3", "1b4"], false);
+  });
+
 document.getElementById("Ja1b2").addEventListener("change", () => {
     RequiredOnnOff(["1b2.1"], true);
   });
   
   document.getElementById("Nee1b2").addEventListener("change", () => {
     RequiredOnnOff(["1b2.1"], false);
-  });
-
-  document.getElementById("Ja1b1").addEventListener("change", function () {
-    RequiredOnnOff(["1b2", "1b3", "1b4"], true);
-  });
-  
-  document.getElementById("Nee1b1").addEventListener("change", function () {
-    RequiredOnnOff(["1b2", "1b3", "1b4"], false);
   });
