@@ -38,7 +38,7 @@
     font-weight: 700;
     font-style: italic;
 }
-.Italic{
+.italic{
     font-style: italic;
 }
 
@@ -127,7 +127,7 @@ fieldset:has(fieldset){
 }
 
 /* Inspiratie van Dante */
-fieldset div:has(:user-invalid)::after{
+:has(:user-invalid)::after {
     content:attr(data-title);
     color: var(--alert-message-color);
     font-style: italic;
@@ -159,7 +159,7 @@ input:user-invalid{
     gap: 5px;
 }
 
-section{
+main, header{
     position:relative;
     padding-top:2em;
     padding-bottom: 2em;
