@@ -12,20 +12,39 @@ function generateFieldsets() {
     verkrijgerCount++;
     legend.textContent = `verkrijger ${verkrijgerCount}`;
   }
-
   //met chatGPT
-  document.getElementById("SpawnQuestions").appendChild(clon);
+  document.getElementById("spawn-questions").appendChild(clon);
 }
 
 // geinspireerd bij Quy
 document.addEventListener("DOMContentLoaded", () =>{
-  document.getElementById("JavascriptFailed").style.display="none";
+  document.getElementById("javascript-failed").style.display="none";
   TurnOffButton()
 });
 
 function TurnOffButton(){
-  document.getElementById("GenerateButton").style.display= "none";
+  document.getElementById("generate-button").style.display= "none";
 }
 function TurnOnButton(){
-  document.getElementById("GenerateButton").style.display= "block";
+  document.getElementById("generate-button").style.display= "block";
 }
+
+document.getElementById("Nee3b1").addEventListener("change", function () {
+  const inputNames = ["3b2", "3b3", "3b4", "3b5", "3b6"];
+  RequiredOnnOff(inputNames, false);
+  
+  TurnOffButton();
+});
+
+document.getElementById("Ja3b1").addEventListener("change", function () {
+  const inputNames = ["3b2", "3b3", "3b4", "3b5", "3b6"];
+  RequiredOnnOff(inputNames, true);
+  
+  TurnOnButton();
+});
+
+document.getElementById("generate-button").addEventListener("click", function () {
+    generateFieldsets();
+    RequiredOnnOff(["3b2", "3b3", "3b4", "3b5", "3b6"], true);
+  });
+

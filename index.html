@@ -4,24 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="required.js" defer></script>
+    <script src="required.js"></script>
+    <script src="Question1.js" defer></script>
     <title>Document</title>
   </head>
 
   <body>
-    <header>
-      <p class="School-Warning">Dit is een schoolproject</p>
+    <header class="school-warning">
+      <p>Dit is een schoolproject</p>
     </header>
 
     <main>
       <!--vraag 1-->
       <form action="Question2.html">
         <h1>1. Gegevens van de overledene</h1>
-        <p class="italic">Vul hier de gegevens in van de overledene.</p>
+        <p>Vul hier de gegevens in van de overledene.</p>
 
         <!--vraag 1a-->
         <fieldset>
-          <legend>1a</legend>
+          <legend class="subsectie">1a</legend>
 
           <!-- data-title gemaakt met Dante's hulp -->
           <!-- cijfer pattern van chatGPT -->
@@ -39,7 +40,7 @@
 
           <label data-title="Tussenvoegsels mogen geen cijfers bevatten.">
             Tussenvoegsel(s)
-            <small class="italic">optioneel</small>
+            <small>optioneel</small>
             <input
               type="text"
               name="Tussenvoegsel"
@@ -74,13 +75,18 @@
 
           <label data-title="Vul een datum in">
             Overlijdensdatum
-            <input type="date" name="overlijdensdatum" required />
+            <input 
+            type="date" 
+            name="overlijdensdatum" 
+            required 
+            id="overlijdensdatum"
+            />
           </label>
         </fieldset>
 
         <!--vraag 1b-->
         <fieldset>
-          <legend>1b</legend>
+          <legend class="subsectie">1b</legend>
 
           <!-- vraag 1b1 -->
           <fieldset data-title="Maak een keuze">
@@ -88,7 +94,7 @@
               Was de overledene getrouwd of had de overledene een geregistreerd
               partner op het moment van overlijden?
             </legend>
-            <label class="inputRadio"
+            <label class="input-radio"
               ><input
                 type="radio"
                 name="1b1"
@@ -96,9 +102,9 @@
                 required
               />
               Nee.
-              <small class="italic"> Ga verder met vraag 1c.</small>
+              <small> Ga verder met vraag 1c.</small>
             </label>
-            <label class="inputRadio"
+            <label class="input-radio"
               ><input
                 type="radio"
                 name="1b1"
@@ -110,13 +116,13 @@
           </fieldset>
 
           <!-- vraag 1b2 -->
-          <fieldset data-title="Maak een keuze">
+          <fieldset class="verdwijn" data-title="Maak een keuze">
             <legend>
               Hadden de overledene en diens echtgenoot of geregistreerd partner
               huwelijkse of partner schaps- voorwaarden laten vastleggen in een
               notariële akte?
             </legend>
-            <label class="inputRadio"
+            <label class="input-radio"
               ><input
                 type="radio"
                 name="1b2"
@@ -124,48 +130,52 @@
               />
               Nee.</label
             >
-            <label class="inputRadio"
+            <label class="input-radio"
               ><input
                 type="radio"
                 name="1b2"
                 id="Ja1b2"
               />
               Ja.
-              <small class="italic"
+              <small
                 >Stuur een kopie van de akte mee met de aangifte.
               </small></label
             >
-            <label
+            <label class="verdwijn"
               ><input type="file" accept="image/*,.pdf" name="1b2.1"
             /></label>
           </fieldset>
 
           <!-- vraag 1b3 -->
-          <fieldset data-title="Maak een keuze">
+          <fieldset class="verdwijn" data-title="Maak een keuze">
             <legend>
               Hadden de overledene en diens partner een finaal verrekenbeding?
             </legend>
-            <label class="inputRadio"
-              ><input type="radio" name="1b3" id="test1" />Nee
+            <label class="input-radio"
+              ><input type="radio" name="1b3"/>Nee
             </label>
-            <label class="inputRadio"
-              ><input type="radio" name="1b3" id="test2" />Ja
+            <label class="input-radio"
+              ><input type="radio" name="1b3"/>Ja
             </label>
           </fieldset>
 
           <!-- vraag 1b4 -->
-          <fieldset>
-            <legend>Datum huwelijkse of partnerschapsvoorwaarden</legend>
-            <label> <input type="date" name="1b4" /></label>
-          </fieldset>
+            <label class="verdwijn" data-title="Vul een datum in">
+              Datum huwelijkse of partnerschapsvoorwaarden
+              <input 
+              type="date" 
+              name="1b4" 
+              /></label>
+
         </fieldset>
 
         <!--vraag 1c-->
         <fieldset>
-          <legend>1c</legend>
+          <legend class="subsectie">1c</legend>
         </fieldset>
 
-        <div id="ButtonGroup">
+        <div id="button-group">
+          <a class="primary-button" href="./Question2.html">Vorige</a>
           <button class="primary-button" type="submit">Volgende</button>
         </div>
       </form>
