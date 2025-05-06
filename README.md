@@ -226,3 +226,123 @@ Quy
 https://chat.openai.com/
 
 https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
+
+## reflectie
+
+Ik vond dit een moeilijke opdracht, omdat ik geen idee had wat goede html is. Ik wist ook niet zo goed waar ik op moest focussen en toen ik het vroeg aan Krijn kreeg ik niet echte nuttige feedback.
+
+# proces herkansing
+
+Ik begon met het kijken naar de html. Ik herinnerde me nog dingen die Vasilis had gezegd tijdens de originele beoordeling en die heb ik als eerste gefixt. Hierdoor ging mijn styling kapot, maar ik besloot dat te negeren.
+
+* Ik begon met alle headers goed te gebruiken.
+* Na elke fieldset een legend neergezet.
+* Ik had waarschuwings code van Dante en hij had een verbeterde versie die ik heb gepakt.
+* Ik heb de namen van de variabelen naar de goede soort gezet: bijvoorbeeld-dit InplaatsVanDit.
+* De sectie vervangen door een main.
+* Een header gebruikt voor de waarschuwing.
+* classes gebruikt voor de styling
+* styling gefixed
+
+## toevoegingen
+
+Ik had een paar kleine javascript dingen die ik moest toevoegen.
+
+1. niet in de toekomst sterven
+2. velden kunnen verwijderen
+
+De eerste heb ik aan chatGPT gevraagd, want ik had geen idee hoe ik dat moest doen. Als ik het goed snapt, pakt hij de datum in const today. Vervolgens pakt hij alle date input fields en stopt daar de max attribute op. Dit is heel logisch, maar ik wist niet hoe ik de datum kon pakken.
+
+```js
+document.addEventListener("DOMContentLoaded", () => {
+  const today = new Date().toISOString().split("T")[0];
+  const allDateInputs = document.querySelectorAll('input[type="date"]');
+
+  allDateInputs.forEach((input) => {
+    input.max = today;
+  });
+});
+```
+
+De tweede toevoeging was niet zo simpel als het lijkt, zie javascript bugs. Ik wist niet hoe ik het moest doen, dus ik vroeg het aan chatGPT en toen ik zag wat het deed dacht ik aan een andere manier om het te doen. Ik kan namelijk een class geven aan de template en dan de lijst van classes ophalen en de laatste in die lijst verwijderen.
+
+## javascript bugs
+
+De eerste bug die ik had gefixed was bij vraag 1, er was een manier om een ontzichtbare vraag alsnog required te hebben, waardoor je niet naar de volgende pagina kon. Dit heb ik redelijk simpel opgelost door een if-statement erin te gooien die checked of de toekomstige radiobutton is aangevinkt.
+
+```js
+document.getElementById("Ja1b1").addEventListener("change", function () {
+  RequiredOnnOff(["1b2", "1b3", "1b4"], true);
+
+  if (document.getElementById("Ja1b2").checked) {
+    RequiredOnnOff(["1b2.1"], true);
+  }
+});
+
+document.getElementById("Nee1b1").addEventListener("change", function () {
+  RequiredOnnOff(["1b2", "1b3", "1b4", "1b2.1"], false);
+});
+```
+
+De grootste bugs kwamen door het genereren van nieuwe secties html. Om bij het begin te beginnen, elke input heeft een originele naam nodig om het op te kunnen sturen naar de 'server'. Dit heb ik kunnen doen op dezelfde manier als hoe ik de naam verander. Ik zoek naar alle input attributen en gooi daar de originele naam + de verkrijgercounts in.
+
+```js
+let inputs = clon.querySelectorAll("input");
+inputs.forEach((input) => {
+    let originalName = input.getAttribute("name");
+    input.setAttribute("name", `${originalName}_${verkrijgerCount}`);
+  });
+```
+
+Nu kwam het volgende probleem. Toen ze dezelfde naam hadden werden ze required en niet required door de bestaande functie, maar nu ze een nieuwe naam hadden werkte dat niet meer. Ik heb een paar verschillende variaties gemaakt en het eindproduct is naar mijn mening het meest optimized. De code werkt als volgt: Ik maak een variabel met alle originele namen en daarna loop ik door alle inputs in de verkrijger class en die push ik in de array. Dit deed ik in elke button, wat niet nodig is. Dus dit heb had ik vervolgens in een functie gezet, en toen riep ik de functie overal aan, wat precies hetzelfde is eigenlijk alleen wat korter. Dus de laatste versie heeft een publieke variabel en ik update de lijst bij het aanmaken en verwijderen van secties. 
+
+```js
+let question3Names = ["3b2", "3b3", "3b5", "3b6", "3b7"];
+function UpdateList() {
+  question3Names = ["3b2", "3b3", "3b5", "3b6", "3b7"];
+
+  document.querySelectorAll(".verkrijgers input").forEach((input) => {
+    if (!input.name.includes("3b4")) {
+      question3Names.push(input.name);
+    }
+  });
+
+  console.log(question3Names);
+}
+
+document
+  .getElementById("generate-button").addEventListener("click", function () {
+    generateFieldsets();
+    UpdateList();
+    RequiredOnnOff(question3Names, true);
+  });
+
+```
+
+Nu kwam ik ook achter een andere bug hierdoor. de 'tussenvoegsel' werd ook required, wat niet moet. Dit was gelukkig een makkelijke oplossing door een if-statement te maken die alles exclude wat 3b4 in de naam heeft.
+
+```js 
+if (!input.name.includes("3b4")) {
+      question3Names.push(input.name);
+    }
+```
+
+Als javascript niet werkt, heb ik een failsafe. Deze failsafe moest ook namen hebben voor de input fields. Dit gaf een error, omdat de code deze ontzichtbare vragen ook required maakte, waardoor je niet verder kon. Dit heb ik opgelost door het in een <noscript> te zetten.
+
+```html
+<noscript id="javascript-failed">
+  <!-- inhoud -->
+</noscript>
+```
+
+Als laatste was er een kleine bug, als ik naar de vorige pagina ging met de browser waren de radiobuttons en alles nog ingedrukt, maar de genereer en verwijder button waren er niet. Dit was op te lossen door de  onpageload te veranderen naar window event listerner pageshow.
+
+```js
+window.addEventListener("pageshow", () => {
+  if (document.getElementById("Ja3b1").checked) {
+    TurnOnButton();
+  } else {
+    TurnOffButton();
+  }
+});
+```

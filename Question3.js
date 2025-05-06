@@ -1,5 +1,6 @@
 /*
 Dit is gedaan met de hulp van chatGPT en Quy
+Update: nog steeds gedaan met hulp van chatGPT
 */
 let verkrijgerCount = 1;
 function generateFieldsets() {
@@ -30,17 +31,17 @@ function deleteLatestVerkrijger() {
   }
 }
 
-let inputNames = ["3b2", "3b3", "3b5", "3b6", "3b7"];
+let question3Names = ["3b2", "3b3", "3b5", "3b6", "3b7"];
 function UpdateList() {
-  inputNames = ["3b2", "3b3", "3b5", "3b6", "3b7"];
+  question3Names = ["3b2", "3b3", "3b5", "3b6", "3b7"];
 
   document.querySelectorAll(".verkrijgers input").forEach((input) => {
     if (!input.name.includes("3b4")) {
-      inputNames.push(input.name);
+      question3Names.push(input.name);
     }
   });
 
-  console.log(inputNames);
+  console.log(question3Names);
 }
 
 function TurnOffButton() {
@@ -62,12 +63,12 @@ window.addEventListener("pageshow", () => {
 });
 
 document.getElementById("Nee3b1").addEventListener("change", function () {
-  RequiredOnnOff(inputNames, false);
+  RequiredOnnOff(question3Names, false);
   TurnOffButton();
 });
 
 document.getElementById("Ja3b1").addEventListener("change", function () {
-  RequiredOnnOff(inputNames, true);
+  RequiredOnnOff(question3Names, true);
   TurnOnButton();
 });
 
@@ -75,10 +76,11 @@ document
   .getElementById("generate-button").addEventListener("click", function () {
     generateFieldsets();
     UpdateList();
-    RequiredOnnOff(inputNames, true);
+    RequiredOnnOff(question3Names, true);
   });
 
 document
   .getElementById("verwijder-button").addEventListener("click", function () {
     deleteLatestVerkrijger();
+    UpdateList();
   });

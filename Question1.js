@@ -1,3 +1,4 @@
+// chatGPT
 document.addEventListener("DOMContentLoaded", () => {
   const today = new Date().toISOString().split("T")[0];
   const allDateInputs = document.querySelectorAll('input[type="date"]');
